@@ -1,4 +1,4 @@
-;;The CBW (convert byte to word) instruction extend s the sign bit of AL into the AH register. This preserves the number's sign:
+;;The CBW (convert byte to word) instruction extends the sign bit of AL into the AH register. This preserves the number's sign:
 
 
 INCLUDE Irvine32.inc
