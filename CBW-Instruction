@@ -1,0 +1,17 @@
+;;The CBW (convert byte to word) instruction extend s the sign bit of AL into the AH register. This preserves the number's sign:
+
+
+INCLUDE Irvine32.inc
+
+.data
+byteVal Sbyte -101   ; 9Bh
+.code
+main PROC
+mov eax, 0
+mov al, byteVal      ; al = 9bh
+cbw					 ; ax = FF9Bh
+call	DumpRegs			; display the registers
+
+	exit
+main ENDP
+END main
