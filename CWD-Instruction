@@ -1,0 +1,17 @@
+;The CWD (convert word to doubleword) instruction extends the sign bit of AX into the DX register.
+
+INCLUDE Irvine32.inc
+
+.data
+wordVal Sword -101   ; ff9Bh
+.code
+main PROC
+mov eax, 0
+mov edx, 0
+mov ax, wordVal      ; ax = ff9bh
+cwd					 ; dx:ax = ffffFF9Bh
+call	DumpRegs			; display the registers
+
+exit
+main ENDP
+END main
